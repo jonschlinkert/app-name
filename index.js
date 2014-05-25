@@ -8,14 +8,16 @@
 
 module.exports = function(str, words, options) {
   var arr = str.split(/[\W_-]/).filter(Boolean);
-  words = !Array.isArray(words) ? [words] : words;
   var w = [];
 
   options = options || {};
 
-  words.forEach(function(word) {
-    w = w.concat(word.split('-'));
-  });
+  if (words) {
+    words = !Array.isArray(words) ? [words] : words;
+    words.forEach(function(word) {
+      w = w.concat(word.split('-'));
+    });
+  }
 
   var filtered = arr.filter(function(segment) {
     return w.indexOf(segment) === -1;
