@@ -1,7 +1,7 @@
 {
   "name": "app-name",
-  "description": "Attempts to derive the \"actual\" name of a plugin or generator by stripping certain words from the title, allowing it to be used in templates. For example, the \"actual\" name of `generator-foo` would `foo`.",
-  "version": "0.1.1",
+  "description": "Strip certain words from an app name to derive the \"actual\" name. Good for generating grunt and gulp plugins, handlebars helpers, tags, filters, yeoman generators etc. so the names can be used in templates. For example, the \"actual\" name of `generator-foo` would `foo`.",
+  "version": "0.1.4",
   "homepage": "https://github.com/jonschlinkert/app-name",
   "author": {
     "name": "Jon Schlinkert",
@@ -21,10 +21,10 @@
     }
   ],
   "keywords": [
-    "docs",
-    "documentation",
-    "generate",
-    "generator",
+    "name",
+    "app",
+    "strip",
+    "rename",
     "markdown",
     "templates",
     "verb"
