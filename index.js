@@ -5,30 +5,32 @@
  * Licensed under the MIT license.
  */
 
+'use strict';
 
 module.exports = function(str, words, options) {
   var arr = str.split(/[\W_-]/).filter(Boolean);
-  var w = [];
+  var segments = [];
 
   options = options || {};
 
   if (words) {
     words = !Array.isArray(words) ? [words] : words;
     words.forEach(function(word) {
-      w = w.concat(word.split('-'));
+      segments = segments.concat(word.split('-'));
     });
   }
 
   var filtered = arr.filter(function(segment) {
-    return w.indexOf(segment) === -1;
+    return segments.indexOf(segment) === -1;
   });
 
 
   if (options.first) {
     return filtered[0];
   }
+
   if (options.last) {
-    return filtered.reverse()[0];
+    return filtered[filtered.length - 1];
   }
 
   return filtered.join(options.sep || '-');

@@ -1,7 +1,7 @@
 {
   "name": "app-name",
-  "description": "Strip certain words from an app name to derive the \"actual\" name. Good for generating grunt and gulp plugins, handlebars helpers, tags, filters, yeoman generators etc. so the names can be used in templates. For example, the \"actual\" name of `generator-foo` would `foo`.",
-  "version": "0.1.4",
+  "description": "Create variable names from module names. Like `gulp-jshint` => `jshint`. Useful for yeoman generators, or for loaders for gulp, assemble, and grunt plugins.",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/app-name",
   "author": {
     "name": "Jon Schlinkert",
@@ -21,13 +21,18 @@
     }
   ],
   "keywords": [
-    "name",
     "app",
-    "strip",
-    "rename",
+    "assemble",
+    "generator",
+    "grunt",
+    "gulp",
     "markdown",
+    "name",
+    "rename",
+    "strip",
     "templates",
-    "verb"
+    "verb",
+    "yeoman"
   ],
   "main": "index.js",
   "engines": {
@@ -37,8 +42,8 @@
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "verb": "~0.2.0",
-    "chai": "~1.9.1",
-    "mocha": "~1.18.2"
+    "mocha": "*",
+    "should": "^4.0.4",
+    "verb": ">= 0.2.6"
   }
 }
